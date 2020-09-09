@@ -1,0 +1,442 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-y: hidden;
+  display: flex;
+  align-items: center;
+  font-family: Nunito, sans-serif;
+
+}
+
+p {
+  margin: 0;
+}
+
+#alert {
+  text-align: center;
+  opacity: 1;
+  transition: opacity 0.6s; /* 600ms to fade out */
+  color: firebrick;
+  background: orange;
+  opacity: .8;
+  font-weight: bold;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: firebrick;
+  font-weight: bold;
+  margin-left: 10px;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: red;
+}
+
+
+
+
+/* Video Background */
+.video-background {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+
+}
+
+video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(255, 255, 255, 0.1)
+
+}
+
+/* Container */
+.container {
+  min-width: 580px;
+  min-height: 304px;
+  color: black;
+  margin: 0 auto;
+  padding: 25px 50px;
+  border-radius: 5px;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  background: rgba(255, 255, 255, .5);
+
+}
+
+.input-container {
+  position: relative;
+  top: 20px;
+}
+
+h1 {
+  font-size: 40px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+/* Form */
+.form {
+  width: 480px;
+}
+
+label {
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+input {
+  width: 95%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background: #fff;
+  outline: none;
+
+  font-family: Nunito, sans-serif;
+  opacity: .8;
+}
+
+/* Button */
+button {
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
+  margin-top: 15px;
+  border: none;
+  text-transform: uppercase;
+  background: #006959;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  opacity: .8;
+}
+
+button:hover {
+  filter: brightness(180%);
+}
+
+button:active {
+  transform: scale(.95);
+}
+
+
+
+/* Countdown */
+
+
+ul {
+  margin-left: -45px;
+}
+
+li {
+display: inline-block;
+  font-size: 30px;
+  list-style-type: none;
+  padding: 10px;
+  text-transform: uppercase;
+  
+}
+
+li span {
+  display: block;
+  font-size: 80px;
+  text-align: center;
+}
+
+/* Complete */
+.complete {
+  position: relative;
+  top: 60px;
+}
+
+.complete-title {
+  
+  animation: complete 1s infinite;
+  text-transform: uppercase;
+}
+
+.complete-info {
+  z-index: 10;
+}
+
+@keyframes complete {
+
+  0% {color: red;  }
+  20% {    color: orange;  }
+  40% {    color: yellow;  }
+  50% {   transform: scale(1.1);}
+  60% {    color: green;  }
+  80% {    color: blue;  }
+  100% { color: violet;}
+}
+
+/* Music player */
+
+/* Controls */
+.player-container {
+  position: relative;
+  width: 45px;
+  
+  margin: auto;
+  opacity: .8;
+  
+  
+}
+
+.fas {
+  font-size: 20px;
+  color: rgb(175, 245, 245);
+  
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+ 
+}
+
+
+
+.fas:hover {
+  filter: brightness(180%);
+}
+
+.fas:active {
+  transform: scale(.95);
+}
+
+.main-button {
+  
+  height: 45px;
+  border-radius: 100%;
+  margin-top: 15px;
+  border: none;
+  text-transform: uppercase;
+  background: #006959;
+  color: rgb(43, 228, 212);
+  cursor: pointer;
+  outline: none;
+}
+
+.fa-play {
+  display: flex;
+  align-items:center;
+        justify-content:center;
+        padding-top: 1px;
+        padding-left: 4px;
+}
+
+.fa-pause {
+  display: flex;
+  align-items:center;
+        justify-content:center;
+        padding-top: 1px;
+}
+
+
+
+/* Media Query: Large Smartphone (Vertical) */
+@media screen and (max-width: 1000px) {
+
+  video {
+    object-position: 70%;
+  }
+
+  .container {
+    width: 90%;
+        min-width: unset;
+        
+        min-height: 245px;
+        padding: 20px;
+        
+      }
+}
+
+/* Media Query: Large Smartphone (Vertical) */
+@media screen and (max-width: 600px) {
+  
+  
+  /* video {
+
+    margin-top: -10px;
+  } */
+
+  video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+  }
+
+  /* Video Background */
+.video-background {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+
+}
+
+  .container {
+width: 80%;
+    min-width: unset;
+    
+    min-height: 245px;
+    padding: 20px;
+    
+  }
+
+  .input-container {
+    top: unset;
+  }
+
+  .countdown {
+    
+    
+    width: 90%;
+  }
+
+  .player-container {
+    position: relative;
+  width: 45px;
+  left: -25px;
+  margin-left: 50%;
+  opacity: .8;
+  }
+
+  .form {
+    width: unset;
+  }
+
+  input {
+    width: 93%;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+    white-space: nowrap;
+  overflow: hidden;
+  text-overflow: wrap;
+    
+    
+  }
+
+  li {
+    font-size: .6rem;
+    text-align: center;
+    margin-left: .5rem;
+  }
+
+  li span {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  /* Complete */
+.complete {
+  position: relative;
+  top: 60px;
+  font-size: 1rem;
+}
+
+.complete-title {
+  
+  animation: complete 1s infinite;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+.complete-info {
+  z-index: 10;
+}
+
+
+}
+
+/* Media Query: Large Smartphone (Vertical) */
+@media screen and (max-width: 361px) {
+  
+  
+  /* video {
+
+    margin-top: -1px;
+  } */
+
+  .container {
+
+    min-width: unset;
+    width: 95vw;
+    min-height: 245px;
+    padding: 20px;
+    margin: 10px;
+  }
+
+  .input-container {
+    top: unset;
+  }
+
+  .countdown {
+    position: relative;
+    top: 10px;
+  }
+
+  .player-container {
+    position: relative;
+  width: 45px;
+  left: -25px;
+  margin-left: 50%;
+  opacity: .8;
+  }
+
+  .form {
+    width: unset;
+  }
+
+  input {
+    width: 93%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  li {
+    font-size: .4rem;
+    margin: 0;
+    margin-left: .5rem;
+  }
+
+  li span {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0;
+  }
+}
