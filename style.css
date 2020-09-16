@@ -9,6 +9,7 @@ body {
   min-height: 100vh;
   overflow-y: hidden;
   display: flex;
+  flex-direction: column;
   align-items: center;
   font-family: Nunito, sans-serif;
 
@@ -80,7 +81,7 @@ video {
   min-width: 580px;
   min-height: 304px;
   color: black;
-  margin: 0 auto;
+  margin: auto auto 0 auto;
   padding: 25px 50px;
   border-radius: 5px;
   z-index: 2;
@@ -153,13 +154,11 @@ button:active {
 /* Countdown */
 
 
-ul {
-  margin-left: -45px;
-}
+
 
 li {
 display: inline-block;
-  font-size: 30px;
+  font-size: 26px;
   list-style-type: none;
   padding: 10px;
   text-transform: uppercase;
@@ -206,7 +205,7 @@ li span {
   position: relative;
   width: 45px;
   
-  margin: auto;
+  margin: 0 auto auto auto;
   opacity: .8;
   
   
@@ -351,10 +350,18 @@ width: 80%;
     
   }
 
+ul { 
+  padding-inline-start: 0px;
+  margin-left: 3.5rem;
+}
+  
+
   li {
-    font-size: .6rem;
-    text-align: center;
-    margin-left: .5rem;
+    font-size: .5rem;
+    padding: 5px;
+    /* text-align: center; */
+    /* margin-left: 45px; */
+    
   }
 
   li span {
@@ -431,15 +438,17 @@ width: 80%;
     font-size: 1.5rem;
   }
 
+  ul { 
+    padding-inline-start: 0px;
+    margin-left: 2rem;
+  }
+
   li {
     font-size: .4rem;
-    margin: 0;
-    margin-left: .5rem;
   }
 
   li span {
     font-size: 25px;
     font-weight: bold;
-    margin: 0;
   }
 }
