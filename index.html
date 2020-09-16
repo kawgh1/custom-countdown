@@ -12,8 +12,9 @@
 
 <body>
     <!-- Video background -->
-    <video class="video-background" id="vid" src='https://pixabay.com/videos/download/video-15629_tiny.mp4' loop muted
-        autoplay></video>
+    <!-- autoplay loop muted playsinline => All 4 reqd to autoplay on mobile browsers -->
+    <video class="video-background" id="vid" src='https://pixabay.com/videos/download/video-15629_tiny.mp4' autoplay
+        loop muted playsinline></video>
     <!-- original video -->
     <!-- <video class="video-background" loop muted autoplay>
         <source src="time.mp4">
