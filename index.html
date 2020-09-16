@@ -12,10 +12,13 @@
 
 <body>
     <!-- Video background -->
-    <video class="video-background" loop muted autoplay>
+    <video class="video-background" id="vid" src='https://pixabay.com/videos/download/video-15629_tiny.mp4' loop muted
+        autoplay></video>
+    <!-- original video -->
+    <!-- <video class="video-background" loop muted autoplay>
         <source src="time.mp4">
         </source>
-    </video>
+    </video> -->
     <div class="video-overlay"></div>
 
 
@@ -85,7 +88,11 @@
 
 
     <!-- Script -->
+    <script>let vid = document.getElementById('vid');
+        vid.playbackRate = 0.1;</script>
+
     <script src="script.js"></script>
+
 </body>
 
 </html>
