@@ -1,7 +1,8 @@
 # custom-countdown
 custom countdown app based on Zero to Mastery project.
 
-I added custom alert message, music and other styling. Changed video source format for mobile browser integration.
+I added custom alert message, music and other styling. 
+Changed video source and formatting for mobile browser integration.
 
 
 
